@@ -76,16 +76,3 @@ GitHub:
 [https://github.com/HarishaKunchakuri](https://github.com/HarishaKunchakuri)
 
 ```
-
----
-
-✅ This README will help people:
-
-- Understand your project  
-- Clone it easily  
-- Run it quickly
-
----
-
-If you want, I can also give you a **much better professional README (with screenshots + website demo)** which makes your GitHub project look **very impressive for internships and placements**.
-```
