@@ -74,5 +74,3 @@ The website promotes **biodegradable bags** and encourages reducing plastic poll
 
 GitHub:
 [https://github.com/HarishaKunchakuri](https://github.com/HarishaKunchakuri)
-
-```
