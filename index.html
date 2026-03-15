@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BeyondPlastic – Compostable Bags</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/home.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- FLOATING NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-brand">
+      <div class="nav-logo">
+        <img src="../images/logo.png" alt="Beyond Plastic Logo" style="height:60px; width:auto; border-radius: 50%; "/>
+      </div>
+      <span class="nav-company-name">BeyondPlastic</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="pages/about.html">About</a></li>
+      <li><a href="pages/products.html">Products</a></li>
+      <li><a href="pages/certifications.html">Certifications</a></li>
+      <li><a href="pages/other.html">Other</a></li>
+      <li><a href="pages/contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- HOME HERO + ANIMATION -->
+  <section class="hero-section">
+    <div class="hero-bg-shapes">
+      <div class="shape shape1"></div>
+      <div class="shape shape2"></div>
+      <div class="shape shape3"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-text">
+        <p class="hero-tag">🌱 100% Compostable</p>
+        <h1 class="hero-title">The Future<br/><span>BeyondPlastic</span></h1>
+        <p class="hero-sub">Crafting bags that return to earth — nurturing the soil, not polluting it. Durable today, gone tomorrow, leaves only goodness.</p>
+        <div class="hero-cta">
+          <a href="pages/products.html" class="btn-primary">Explore Products</a>
+          <a href="pages/about.html" class="btn-outline">Our Story</a>
+        </div>
+      </div>
+
+      <div class="hero-animation">
+        <div class="anim-scene" id="animScene">
+          <!-- Stage 1: Bag in use -->
+          <div class="anim-stage stage-use" id="stage1">
+            <div class="bag-wrapper">
+              <svg class="bag-svg" viewBox="0 0 120 150" xmlns="http://www.w3.org/2000/svg">
+                <path d="M30 40 L20 140 L100 140 L90 40 Z" fill="#52b788" stroke="#2d6a4f" stroke-width="2" rx="4"/>
+                <path d="M45 40 Q45 20 60 20 Q75 20 75 40" fill="none" stroke="#2d6a4f" stroke-width="3" stroke-linecap="round"/>
+                <text x="60" y="100" text-anchor="middle" font-size="9" fill="white" font-family="DM Sans">Beyond</text>
+                <text x="60" y="113" text-anchor="middle" font-size="9" fill="white" font-family="DM Sans">Plastic</text>
+                <path d="M44 75 Q60 68 76 75" fill="none" stroke="white" stroke-width="1.5" opacity="0.6"/>
+                <circle cx="60" cy="60" r="8" fill="none" stroke="white" stroke-width="1.5" opacity="0.5"/>
+                <text x="60" y="64" text-anchor="middle" font-size="8" fill="white">♻</text>
+              </svg>
+            </div>
+            <p class="stage-label">Biodegradable Bag in Use</p>
+          </div>
+
+          <!-- Stage 2: Being buried/composted -->
+          <div class="anim-stage stage-compost hidden" id="stage2">
+            <div class="soil-scene">
+              <div class="soil-top"></div>
+              <div class="bag-buried">
+                <svg viewBox="0 0 80 100" xmlns="http://www.w3.org/2000/svg" class="bag-small">
+                  <path d="M20 25 L12 90 L68 90 L60 25 Z" fill="#52b788" opacity="0.7" stroke="#2d6a4f" stroke-width="1.5"/>
+                  <path d="M30 25 Q30 12 40 12 Q50 12 50 25" fill="none" stroke="#2d6a4f" stroke-width="2"/>
+                </svg>
+              </div>
+              <div class="soil-cover"></div>
+              <div class="microbes">
+                <span class="microbe">🦠</span>
+                <span class="microbe">🦠</span>
+                <span class="microbe">🦠</span>
+              </div>
+            </div>
+            <p class="stage-label">Composting Underground…</p>
+          </div>
+
+          <!-- Stage 3: Breaking down -->
+          <div class="anim-stage stage-break hidden" id="stage3">
+            <div class="fragments-wrapper">
+              <div class="fragment f1"></div>
+              <div class="fragment f2"></div>
+              <div class="fragment f3"></div>
+              <div class="fragment f4"></div>
+              <div class="fragment f5"></div>
+              <div class="fragment f6"></div>
+            </div>
+            <p class="stage-label">Breaking Down Naturally</p>
+          </div>
+
+          <!-- Stage 4: Plant grows -->
+          <div class="anim-stage stage-grow hidden" id="stage4">
+            <div class="grow-scene">
+              <div class="ground-strip"></div>
+              <div class="plant-grow">
+                <div class="stem"></div>
+                <div class="leaf leaf-left"></div>
+                <div class="leaf leaf-right"></div>
+                <div class="leaf leaf-top"></div>
+                <div class="flower"></div>
+              </div>
+              <div class="soil-particles">
+                <span>🌍</span>
+              </div>
+            </div>
+            <p class="stage-label">Nutrients Enrich the Soil 🌱</p>
+          </div>
+
+          <div class="anim-controls">
+            <button class="anim-btn" id="animPrev" disabled><i class="fas fa-chevron-left"></i></button>
+            <div class="anim-dots">
+              <span class="dot active" data-stage="0"></span>
+              <span class="dot" data-stage="1"></span>
+              <span class="dot" data-stage="2"></span>
+              <span class="dot" data-stage="3"></span>
+            </div>
+            <button class="anim-btn" id="animNext"><i class="fas fa-chevron-right"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-num">180</span><span class="stat-unit">days</span>
+        <p>Full Decomposition</p>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-num">100%</span>
+        <p>Compostable Materials</p>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-num">0</span>
+        <p>Toxic Residue Left</p>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-num">BIS</span>
+        <p>Certified & Approved</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUICK INTRO STRIP -->
+  <section class="strip-section">
+    <div class="strip-items">
+      <div class="strip-item"><i class="fas fa-leaf"></i><span>Eco-Friendly</span></div>
+      <div class="strip-item"><i class="fas fa-recycle"></i><span>Fully Compostable</span></div>
+      <div class="strip-item"><i class="fas fa-seedling"></i><span>Soil Enriching</span></div>
+      <div class="strip-item"><i class="fas fa-shield-alt"></i><span>Certified</span></div>
+      <div class="strip-item"><i class="fas fa-industry"></i><span>Locally Manufactured</span></div>
+    </div>
+  </section>
+
+  <!-- TRUSTED CUSTOMERS MARQUEE -->
+  <!--
+  =====================================================================
+  HOW TO ADD CUSTOMER LOGOS:
+  =====================================================================
+  1. Save your customer logo image to: images/customers/
+     (Create this folder inside your beyond-plastic/images/ folder)
+
+  2. Copy ONE of the logo-item blocks below and paste it inside BOTH
+     .marquee-track divs (the section uses two identical tracks
+     side-by-side so the scroll loops seamlessly).
+
+  TEMPLATE:
+  <div class="logo-item">
+    <img src="images/customers/YOUR-LOGO.png" alt="Customer Name"/>
+  </div>
+
+  3. Paste the same block in both .marquee-track divs.
+     No other code changes needed — the scroll adjusts automatically.
+  =====================================================================
+  -->
+  <section class="customers-section">
+    <div class="customers-header">
+      <span class="customers-tag">Trusted By</span>
+      <h2>Our Customers</h2>
+    </div>
+
+    <div class="marquee-wrapper">
+      <!-- Fade edges -->
+      <div class="marquee-fade marquee-fade-left"></div>
+      <div class="marquee-fade marquee-fade-right"></div>
+
+      <div class="marquee-viewport">
+        <!-- Track 1 -->
+        <div class="marquee-track" id="marqueeTrack1">
+          <div class="logo-item"><img src="./images/customers/Screenshot 2026-03-14 at 9.10.25 PM.png" alt="Customer 1" onerror="this.closest('.logo-item').querySelector('.logo-fallback').style.display='flex'; this.style.display='none'"/><div class="logo-fallback">Customer 1</div></div>
+          <div class="logo-item"><img src="./images/customers/Screenshot 2026-03-15 at 11.33.48 AM.png" alt="Customer 2" onerror="this.closest('.logo-item').querySelector('.logo-fallback').style.display='flex'; this.style.display='none'"/><div class="logo-fallback">Customer 2</div></div>
+          <div class="logo-item"><img src="./images/customers/Screenshot 2026-03-15 at 11.33.56 AM.png" alt="Customer 3" onerror="this.closest('.logo-item').querySelector('.logo-fallback').style.display='flex'; this.style.display='none'"/><div class="logo-fallback">Customer 3</div></div>
+          <div class="logo-item"><img src="./images/customers/Screenshot 2026-03-15 at 11.34.05 AM.png" alt="Customer 4" onerror="this.closest('.logo-item').querySelector('.logo-fallback').style.display='flex'; this.style.display='none'"/><div class="logo-fallback">Customer 4</div></div>
+          <div class="logo-item"><img src="images/customers/customer-5.png" alt="Customer 5" onerror="this.closest('.logo-item').querySelector('.logo-fallback').style.display='flex'; this.style.display='none'"/><div class="logo-fallback">Customer 5</div></div>
+          <!-- <div class="logo-item"><img src="images/customers/customer-6.png" alt="Customer 6" onerror="this.closest('.logo-item').querySelector('.logo-fallback').style.display='flex'; this.style.display='none'"/><div class="logo-fallback">Customer 6</div></div>
+          <div class="logo-item"><img src="images/customers/customer-7.png" alt="Customer 7" onerror="this.closest('.logo-item').querySelector('.logo-fallback').style.display='flex'; this.style.display='none'"/><div class="logo-fallback">Customer 7</div></div>
+          <div class="logo-item"><img src="images/customers/customer-8.png" alt="Customer 8" onerror="this.closest('.logo-item').querySelector('.logo-fallback').style.display='flex'; this.style.display='none'"/><div class="logo-fallback">Customer 8</div></div> -->
+        </div>
+        <!-- Track 2 (duplicate for seamless loop) -->
+        <div class="marquee-track" id="marqueeTrack2" aria-hidden="true">
+          <div class="logo-item"><img src="./images/customers/Screenshot 2026-03-14 at 9.10.25 PM.png" alt="Customer 1" onerror="this.closest('.logo-item').querySelector('.logo-fallback').style.display='flex'; this.style.display='none'"/><div class="logo-fallback">Customer 1</div></div>
+          <div class="logo-item"><img src="./images/customers/Screenshot 2026-03-15 at 11.33.48 AM.png" alt="Customer 2" onerror="this.closest('.logo-item').querySelector('.logo-fallback').style.display='flex'; this.style.display='none'"/><div class="logo-fallback">Customer 2</div></div>
+          <div class="logo-item"><img src="./images/customers/Screenshot 2026-03-15 at 11.33.56 AM.png" alt="Customer 3" onerror="this.closest('.logo-item').querySelector('.logo-fallback').style.display='flex'; this.style.display='none'"/><div class="logo-fallback">Customer 3</div></div>
+          <div class="logo-item"><img src="./images/customers/Screenshot 2026-03-15 at 11.34.05 AM.png" alt="Customer 4" onerror="this.closest('.logo-item').querySelector('.logo-fallback').style.display='flex'; this.style.display='none'"/><div class="logo-fallback">Customer 4</div></div>
+          <div class="logo-item"><img src="images/customers/customer-5.png" alt="Customer 5" onerror="this.closest('.logo-item').querySelector('.logo-fallback').style.display='flex'; this.style.display='none'"/><div class="logo-fallback">Customer 5</div></div>
+          <!-- <div class="logo-item"><img src="images/customers/customer-6.png" alt="Customer 6" onerror="this.closest('.logo-item').querySelector('.logo-fallback').style.display='flex'; this.style.display='none'"/><div class="logo-fallback">Customer 6</div></div>
+          <div class="logo-item"><img src="images/customers/customer-7.png" alt="Customer 7" onerror="this.closest('.logo-item').querySelector('.logo-fallback').style.display='flex'; this.style.display='none'"/><div class="logo-fallback">Customer 7</div></div>
+          <div class="logo-item"><img src="images/customers/customer-8.png" alt="Customer 8" onerror="this.closest('.logo-item').querySelector('.logo-fallback').style.display='flex'; this.style.display='none'"/><div class="logo-fallback">Customer 8</div></div> -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="22" cy="22" r="20" fill="#52b788"/>
+            <path d="M14 30 Q18 14 22 18 Q26 22 22 28 Q20 32 16 30" fill="#fff" opacity="0.9"/>
+            <path d="M22 28 Q28 16 30 22 Q32 28 26 32 Q22 34 22 28" fill="#d8f3dc" opacity="0.8"/>
+            <path d="M18 32 Q20 36 22 34 Q24 32 22 28" fill="#2d6a4f"/>
+          </svg>
+        </div>
+        <h3>BeyondPlastic</h3>
+        <p>Pioneering sustainable packaging solutions for a greener tomorrow.</p>
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="pages/about.html">About Us</a></li>
+          <li><a href="pages/products.html">Products</a></li>
+          <li><a href="pages/certifications.html">Certifications</a></li>
+          <li><a href="pages/other.html">Other</a></li>
+          <li><a href="pages/contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-products">
+        <h4>Our Products</h4>
+        <ul>
+          <li><a href="pages/products.html">U-Cut Bags</a></li>
+          <li><a href="pages/products.html">D-Cut Bags</a></li>
+          <li><a href="pages/products.html">W-Cut Bags</a></li>
+          <li><a href="pages/products.html">Garbage Bags</a></li>
+          <li><a href="pages/products.html">Courier Bags</a></li>
+          <li><a href="pages/products.html">Hospital Aprons</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p><i class="fas fa-map-marker-alt"></i> Corporate Office: Lorem Ipsum Street, Hyderabad, Telangana 500001</p>
+        <p><i class="fas fa-industry"></i> Factory: Plot No. XX, Industrial Area, Hyderabad</p>
+        <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+        <p><i class="fas fa-envelope"></i> info@beyondplastic.in</p>
+        <p><i class="fas fa-globe"></i> www.beyondplastic.in</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 Beyond Plastic. All Rights Reserved. | Crafted with 💚 for the Earth</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/home-anim.js"></script>
+</body>
+</html>

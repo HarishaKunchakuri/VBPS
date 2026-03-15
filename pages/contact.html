@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact – BeyondPlastic</title>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <link rel="stylesheet" href="../css/contact.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-brand">
+      <div class="nav-logo">
+        <img src="../images/logo.png" alt="Beyond Plastic Logo" style="height:60px; width:auto; border-radius: 50%; "/>
+        <!-- border: 2px solid black;"/> -->
+      </div>
+      <span class="nav-company-name">BeyondPlastic</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="certifications.html">Certifications</a></li>
+      <li><a href="other.html">Other</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <div class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <h1>Get In <span style="color:var(--green-main)">Touch</span></h1>
+    <p>We'd love to hear from you — whether it's a bulk order, partnership, or just saying hi 🌿</p>
+  </div>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact-section">
+    <div class="contact-inner">
+
+      <!-- LEFT: Company Info -->
+      <div class="contact-info">
+        <div class="info-top">
+          <span class="section-tag">Our Details</span>
+          <h2>BeyondPlastic</h2>
+          <p>Reach us anytime — we're happy to discuss your sustainable packaging needs, bulk orders, or custom manufacturing requirements.</p>
+        </div>
+
+        <div class="info-items">
+          <div class="info-item">
+            <div class="info-icon"><i class="fas fa-building"></i></div>
+            <div>
+              <h4>Company</h4>
+              <p>BeyondPlastic Pvt. Ltd.</p>
+            </div>
+          </div>
+
+          <!-- <div class="info-item">
+            <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <h4>Corporate Office</h4>
+              <p>No. XX, Lorem Ipsum Street,<br/>Banjara Hills, Hyderabad,<br/>Telangana – 500034</p>
+            </div>
+          </div> -->
+
+          <div class="info-item">
+            <div class="info-icon"><i class="fas fa-industry"></i></div>
+            <div>
+              <h4>Factory / Manufacturing Unit</h4>
+              <p>Plot No. XX, IDA Jeedimetla,<br/>Industrial Area, Hyderabad,<br/>Telangana – 500055</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
+            <div>
+              <h4>Phone Number</h4>
+              <p><a href="tel:+919876543210">+91 98765 43210</a></p>
+              <p><a href="tel:+914023456789">+91 40 2345 6789</a> (Office)</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <h4>Email Address</h4>
+              <p><a href="mailto:info@beyondplastic.in">info@beyondplastic.in</a></p>
+              <p><a href="mailto:sales@beyondplastic.in">sales@beyondplastic.in</a></p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon"><i class="fas fa-globe"></i></div>
+            <div>
+              <h4>Website</h4>
+              <p><a href="http://www.beyondplastic.in" target="_blank">www.beyondplastic.in</a></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-social">
+          <!-- <a href="#" class="social-pill"><i class="fab fa-facebook-f"></i> Facebook</a> -->
+          <a href="#" class="social-pill"><i class="fab fa-instagram"></i> Instagram</a>
+          <a href="https://www.linkedin.com/company/beyondplasticsolutions/" class="social-pill"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+          <a href="#" class="social-pill"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- RIGHT: Contact Form -->
+      <div class="contact-form-wrap">
+        <div class="form-header">
+          <h3>Send Us a Message</h3>
+          <p>All fields are required. We'll respond within 1–2 business days.</p>
+        </div>
+
+        <div class="contact-form" id="contactForm">
+          <div class="form-row two-col">
+            <div class="form-group">
+              <label for="fullName"><i class="fas fa-user"></i> Full Name</label>
+              <input type="text" id="fullName" placeholder="Your full name" autocomplete="name"/>
+            </div>
+            <div class="form-group">
+              <label for="email"><i class="fas fa-envelope"></i> Email Address</label>
+              <input type="email" id="email" placeholder="you@example.com" autocomplete="email"/>
+            </div>
+          </div>
+
+          <div class="form-row two-col">
+            <div class="form-group">
+              <label for="phone"><i class="fas fa-phone"></i> Phone Number</label>
+              <input type="tel" id="phone" placeholder="+91 XXXXX XXXXX" autocomplete="tel"/>
+            </div>
+            <div class="form-group">
+              <label for="subject"><i class="fas fa-tag"></i> Subject</label>
+              <input type="text" id="subject" placeholder="e.g. Bulk Order Inquiry"/>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group full-width">
+              <label for="message"><i class="fas fa-comment-dots"></i> Message</label>
+              <textarea id="message" rows="5" placeholder="Tell us about your requirement — product type, quantities, customisation needs, etc."></textarea>
+            </div>
+          </div>
+
+          <button type="button" class="form-submit-btn" id="submitBtn" onclick="submitForm()">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+
+          <div class="form-success" id="formSuccess">
+            <i class="fas fa-check-circle"></i>
+            <div>
+              <strong>Message Sent!</strong>
+              <p>Thank you for reaching out. We'll get back to you within 1–2 business days.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- GOOGLE MAP -->
+  <section class="map-section">
+    <div class="map-header">
+      <i class="fas fa-map-marked-alt"></i>
+      <div>
+        <h3>Find Our Factory</h3>
+        <p>IDA Jeedimetla, Industrial Area, Hyderabad, Telangana</p>
+      </div>
+    </div>
+    <div class="map-container">
+      <!-- Replace the src URL with your actual Google Maps embed URL for your factory location -->
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3805.6936955065434!2d78.42397661487709!3d17.498476988023397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91aab44c5e35%3A0x9f6b9f3e52f4a4d3!2sIDA%20Jeedimetla%2C%20Hyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1234567890123"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Beyond Plastic Factory Location">
+      </iframe>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="22" cy="22" r="20" fill="#52b788"/>
+            <path d="M14 30 Q18 14 22 18 Q26 22 22 28 Q20 32 16 30" fill="#fff" opacity="0.9"/>
+            <path d="M22 28 Q28 16 30 22 Q32 28 26 32 Q22 34 22 28" fill="#d8f3dc" opacity="0.8"/>
+            <path d="M18 32 Q20 36 22 34 Q24 32 22 28" fill="#2d6a4f"/>
+          </svg>
+        </div>
+        <h3>BeyondPlastic</h3>
+        <p>Pioneering sustainable packaging solutions for a greener tomorrow.</p>
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="certifications.html">Certifications</a></li>
+          <li><a href="other.html">Other</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-products">
+        <h4>Our Products</h4>
+        <ul>
+          <li><a href="products.html">U-Cut Bags</a></li>
+          <li><a href="products.html">D-Cut Bags</a></li>
+          <li><a href="products.html">W-Cut Bags</a></li>
+          <li><a href="products.html">Garbage Bags</a></li>
+          <li><a href="products.html">Courier Bags</a></li>
+          <li><a href="products.html">Hospital Aprons</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p><i class="fas fa-map-marker-alt"></i> Corporate Office: Lorem Ipsum Street, Hyderabad, Telangana 500001</p>
+        <p><i class="fas fa-industry"></i> Factory: Plot No. XX, Industrial Area, Hyderabad</p>
+        <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+        <p><i class="fas fa-envelope"></i> info@beyondplastic.in</p>
+        <p><i class="fas fa-globe"></i> www.beyondplastic.in</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 Beyond Plastic. All Rights Reserved. | Crafted with 💚 for the Earth</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script>
+    function submitForm() {
+      const name    = document.getElementById('fullName').value.trim();
+      const email   = document.getElementById('email').value.trim();
+      const phone   = document.getElementById('phone').value.trim();
+      const subject = document.getElementById('subject').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      if (!name || !email || !phone || !subject || !message) {
+        alert('⚠️ All fields are required!\n\nPlease fill in:\n' +
+          (!name    ? '  • Full Name\n'    : '') +
+          (!email   ? '  • Email Address\n' : '') +
+          (!phone   ? '  • Phone Number\n'  : '') +
+          (!subject ? '  • Subject\n'       : '') +
+          (!message ? '  • Message\n'       : ''));
+        return;
+      }
+
+      // Email validation
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        alert('⚠️ Please enter a valid email address.');
+        return;
+      }
+
+      // Success
+      document.getElementById('formSuccess').style.display = 'flex';
+      document.getElementById('submitBtn').style.display = 'none';
+      // Clear fields
+      ['fullName','email','phone','subject','message'].forEach(id => {
+        document.getElementById(id).value = '';
+      });
+    }
+  </script>
+</body>
+</html>

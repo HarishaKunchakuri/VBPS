@@ -1,0 +1,225 @@
+/* =============================================
+   CERTIFICATIONS PAGE
+   ============================================= */
+
+/* ---- BANNER ---- */
+.cert-banner {
+  margin-top: 72px; /* navbar height + gap */
+  width: 100%;
+  height: 340px;
+  position: relative;
+  background: linear-gradient(135deg, var(--green-dark) 0%, #0f2e1e 100%);
+  overflow: hidden;
+}
+
+.cert-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.3;
+}
+
+.cert-banner-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, rgba(27,67,50,0.4), rgba(27,67,50,0.7));
+}
+
+.cert-banner-text {
+  text-align: center;
+  color: white;
+}
+
+.cert-banner-icon {
+  font-size: 3.5rem;
+  color: var(--green-pale);
+  display: block;
+  margin-bottom: 16px;
+  text-shadow: 0 4px 16px rgba(0,0,0,0.3);
+  animation: iconPulse 2s ease-in-out infinite;
+}
+
+@keyframes iconPulse {
+  0%,100%{transform:scale(1)} 50%{transform:scale(1.08)}
+}
+
+.cert-banner-text h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+.cert-banner-text p {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.8);
+}
+
+/* ---- HEADING ROW ---- */
+.cert-heading-row {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  max-width: 900px;
+  margin: 56px auto 0;
+  padding: 0 40px;
+}
+
+.cert-heading-line {
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--green-pale));
+}
+
+.cert-heading-row .cert-heading-line:last-child {
+  background: linear-gradient(270deg, transparent, var(--green-pale));
+}
+
+.cert-heading-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  color: var(--green-dark);
+  white-space: nowrap;
+}
+
+/* ---- INTRO ---- */
+.cert-intro {
+  max-width: 760px;
+  margin: 18px auto 50px;
+  padding: 0 40px;
+  text-align: center;
+}
+
+.cert-intro p {
+  font-size: 1rem;
+  color: var(--text-light);
+  line-height: 1.8;
+}
+
+/* ---- CERTS GRID
+   3 per row. Just add more cert-card blocks — no code changes needed.
+------------------------------------------ */
+.certs-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px 80px;
+}
+
+.certs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* ---- CERT CARD ---- */
+.cert-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  border: 2px solid var(--green-bg);
+}
+
+.cert-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--green-pale);
+}
+
+/* ---- IMAGE BORDER (top section of card) ---- */
+.cert-img-border {
+  width: 100%;
+  border-bottom: 2px solid var(--green-bg);
+  background: var(--green-cream);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 180px;
+}
+
+.cert-img-border img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.cert-card:hover .cert-img-border img {
+  transform: scale(1.04);
+}
+
+/* ---- INFO BORDER (bottom section of card) ---- */
+.cert-info-border {
+  padding: 22px 22px 24px;
+  border-top: 0;
+}
+
+.cert-title {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  margin-bottom: 10px;
+}
+
+.cert-title a {
+  color: var(--green-dark);
+  transition: var(--transition);
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.cert-title a:hover { color: var(--green-main); }
+
+.cert-title a i {
+  font-size: 0.7rem;
+  margin-top: 5px;
+  flex-shrink: 0;
+  color: var(--green-pale);
+}
+
+.cert-desc {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.cert-view-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: var(--green-bg);
+  color: var(--green-mid);
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 50px;
+  border: 1.5px solid var(--green-pastel);
+  transition: var(--transition);
+}
+
+.cert-view-btn:hover {
+  background: var(--green-main);
+  color: white;
+  border-color: var(--green-main);
+  transform: translateY(-1px);
+}
+
+.cert-view-btn i { font-size: 0.9rem; color: #e74c3c; }
+.cert-view-btn:hover i { color: white; }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .certs-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 580px) {
+  .certs-grid { grid-template-columns: 1fr; }
+  .cert-banner { height: 240px; }
+  .certs-container { padding: 0 24px 60px; }
+}
