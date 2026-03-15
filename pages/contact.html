@@ -239,7 +239,78 @@ PIN Code: 500043</p>
 
   <script src="../js/main.js"></script>
   <script>
-    function submitForm() {
+
+    // ── Your EmailJS credentials ──────────────────────────────
+    const EMAILJS_SERVICE_ID  = 'service_qe52gf6';
+    const EMAILJS_TEMPLATE_ID = 'template_f89i0y7';
+    const EMAILJS_PUBLIC_KEY  = 'Dz2Ovslgtvf1qb4tY';
+    // ─────────────────────────────────────────────────────────
+
+    emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+
+    async function submitForm() {
+      const name    = document.getElementById('fullName').value.trim();
+      const email   = document.getElementById('email').value.trim();
+      const phone   = document.getElementById('phone').value.trim();
+      const subject = document.getElementById('subject').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      // Validation
+      if (!name || !email || !phone || !subject || !message) {
+        alert('⚠️ All fields are required!\n\nPlease fill in:\n' +
+          (!name    ? '  • Full Name\n'     : '') +
+          (!email   ? '  • Email Address\n' : '') +
+          (!phone   ? '  • Phone Number\n'  : '') +
+          (!subject ? '  • Subject\n'       : '') +
+          (!message ? '  • Message\n'       : ''));
+        return;
+      }
+
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        alert('⚠️ Please enter a valid email address.');
+        return;
+      }
+
+      // Show loading
+      const btn = document.getElementById('submitBtn');
+      btn.disabled = true;
+      btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending…';
+
+      try {
+        await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+          name      : name,
+          from_name : name,
+          email     : email,
+          from_email: email,
+          phone     : phone,
+          subject   : subject,
+          message   : message,
+          reply_to  : email,
+        });
+
+        // Success
+        document.getElementById('formSuccess').style.display = 'flex';
+        btn.style.display = 'none';
+        ['fullName', 'email', 'phone', 'subject', 'message'].forEach(id => {
+          document.getElementById(id).value = '';
+        });
+
+      } catch (err) {
+        console.error('EmailJS error:', err);
+        btn.disabled = false;
+        btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+        alert('❌ Message could not be sent.\n\nPlease contact us directly:\n📧 info@beyondplastic.in\n📞 +91 77020 72233');
+      }
+    }
+  
+
+
+
+
+
+
+    <!-- function submitForm() {
       const name    = document.getElementById('fullName').value.trim();
       const email   = document.getElementById('email').value.trim();
       const phone   = document.getElementById('phone').value.trim();
@@ -273,7 +344,7 @@ PIN Code: 500043</p>
     }
     const EMAILJS_SERVICE_ID  = 'service_qe52gf6';    // Email Services page
     const EMAILJS_TEMPLATE_ID = 'template_f89i0y7';   // Email Templates page
-    const EMAILJS_PUBLIC_KEY  = 'Dz2Ovslgtvf1qb4tY';    // Account → API Keys
+    const EMAILJS_PUBLIC_KEY  = 'Dz2Ovslgtvf1qb4tY';    // Account → API Keys -->
   </script>
 </body>
 </html>
