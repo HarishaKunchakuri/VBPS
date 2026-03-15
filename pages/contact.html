@@ -248,17 +248,16 @@ PIN Code: 500043</p>
 
     emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
 
-    async function submitForm() {
+    function submitForm() {
       const name    = document.getElementById('fullName').value.trim();
       const email   = document.getElementById('email').value.trim();
       const phone   = document.getElementById('phone').value.trim();
       const subject = document.getElementById('subject').value.trim();
       const message = document.getElementById('message').value.trim();
 
-      // Validation
       if (!name || !email || !phone || !subject || !message) {
         alert('⚠️ All fields are required!\n\nPlease fill in:\n' +
-          (!name    ? '  • Full Name\n'     : '') +
+          (!name    ? '  • Full Name\n'    : '') +
           (!email   ? '  • Email Address\n' : '') +
           (!phone   ? '  • Phone Number\n'  : '') +
           (!subject ? '  • Subject\n'       : '') +
@@ -266,58 +265,21 @@ PIN Code: 500043</p>
         return;
       }
 
+      // Email validation
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!emailRegex.test(email)) {
         alert('⚠️ Please enter a valid email address.');
         return;
       }
 
+      // Success
       document.getElementById('formSuccess').style.display = 'flex';
       document.getElementById('submitBtn').style.display = 'none';
       // Clear fields
       ['fullName','email','phone','subject','message'].forEach(id => {
         document.getElementById(id).value = '';
       });
-
-      // Show loading
-      const btn = document.getElementById('submitBtn');
-      btn.disabled = true;
-      btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending…';
-
-      try {
-        await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
-          name      : name,
-          from_name : name,
-          email     : email,
-          from_email: email,
-          phone     : phone,
-          subject   : subject,
-          message   : message,
-          reply_to  : email,
-        });
-
-        // Success
-        document.getElementById('formSuccess').style.display = 'flex';
-        btn.style.display = 'none';
-        ['fullName', 'email', 'phone', 'subject', 'message'].forEach(id => {
-          document.getElementById(id).value = '';
-        });
-
-      } catch (err) {
-        console.error('EmailJS error:', err);
-        btn.disabled = false;
-        btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
-        alert('❌ Message could not be sent.\n\nPlease contact us directly:\n📧 info@beyondplastic.in\n📞 +91 77020 72233');
-      }
     }
-  
-
-
-
-
-
-
-
   </script>
 </body>
 </html>
