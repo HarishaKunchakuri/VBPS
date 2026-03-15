@@ -6,7 +6,7 @@ This project is a simple responsive website for **Beyond Plastic**, a company th
 ## 📂 Project Structure
 
 
-
+````
 beyond-plastic/
 │
 ├── index.html
@@ -32,7 +32,7 @@ beyond-plastic/
 ├── certifications.html
 ├── other.html
 └── contact.html
-
+````
 ````
 
 ## 🚀 How to Clone and Run the Project
