@@ -272,6 +272,13 @@ PIN Code: 500043</p>
         return;
       }
 
+      document.getElementById('formSuccess').style.display = 'flex';
+      document.getElementById('submitBtn').style.display = 'none';
+      // Clear fields
+      ['fullName','email','phone','subject','message'].forEach(id => {
+        document.getElementById(id).value = '';
+      });
+
       // Show loading
       const btn = document.getElementById('submitBtn');
       btn.disabled = true;
@@ -310,41 +317,7 @@ PIN Code: 500043</p>
 
 
 
-    <!-- function submitForm() {
-      const name    = document.getElementById('fullName').value.trim();
-      const email   = document.getElementById('email').value.trim();
-      const phone   = document.getElementById('phone').value.trim();
-      const subject = document.getElementById('subject').value.trim();
-      const message = document.getElementById('message').value.trim();
 
-      if (!name || !email || !phone || !subject || !message) {
-        alert('⚠️ All fields are required!\n\nPlease fill in:\n' +
-          (!name    ? '  • Full Name\n'    : '') +
-          (!email   ? '  • Email Address\n' : '') +
-          (!phone   ? '  • Phone Number\n'  : '') +
-          (!subject ? '  • Subject\n'       : '') +
-          (!message ? '  • Message\n'       : ''));
-        return;
-      }
-
-      // Email validation
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailRegex.test(email)) {
-        alert('⚠️ Please enter a valid email address.');
-        return;
-      }
-
-      // Success
-      document.getElementById('formSuccess').style.display = 'flex';
-      document.getElementById('submitBtn').style.display = 'none';
-      // Clear fields
-      ['fullName','email','phone','subject','message'].forEach(id => {
-        document.getElementById(id).value = '';
-      });
-    }
-    const EMAILJS_SERVICE_ID  = 'service_qe52gf6';    // Email Services page
-    const EMAILJS_TEMPLATE_ID = 'template_f89i0y7';   // Email Templates page
-    const EMAILJS_PUBLIC_KEY  = 'Dz2Ovslgtvf1qb4tY';    // Account → API Keys -->
   </script>
 </body>
 </html>
