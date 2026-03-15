@@ -1,11 +1,11 @@
-```markdown
+
 # Beyond Plastic Website
 
 This project is a simple responsive website for **Beyond Plastic**, a company that produces biodegradable bags as an eco-friendly alternative to plastic.
 
 ## 📂 Project Structure
 
-```
+
 
 beyond-plastic/
 │
